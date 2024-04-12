@@ -10,7 +10,7 @@ import org.hibernate.annotations.GenericGenerator;
 import java.util.UUID;
 
 @Entity
-@Table(schema = "devops", name = "`order_item`")
+@Table(schema = "public", name = "`order_item`")
 @Getter
 @Setter
 @NoArgsConstructor

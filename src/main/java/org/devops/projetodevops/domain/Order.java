@@ -15,7 +15,7 @@ import java.util.Set;
 import java.util.UUID;
 
 @Entity
-@Table(schema = "devops", name = "`order`")
+@Table(schema = "public", name = "`order`")
 @Getter
 @Setter
 @NoArgsConstructor

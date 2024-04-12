@@ -1,5 +1,5 @@
 -- Inserção de dados na tabela "order"
-create table devops."order"
+create table public."order"
 (
     status     smallint
         constraint order_status_check
@@ -10,27 +10,19 @@ create table devops."order"
     user_id    uuid         not null
 );
 
-alter table devops."order"
-    owner to sa;
-
-create table devops.order_item
+create table public.order_item
 (
     quantity   integer not null,
     id         uuid    not null
         primary key,
     order_id   uuid
         constraint fk7pv97udw3cbgddveqn6eoosng
-            references devops."order",
+            references public."order",
     product_id uuid    not null
 );
 
-alter table devops.order_item
-    owner to sa;
 
-
-
-
-INSERT INTO devops."order" (status, created_at, id, user_id)
+INSERT INTO public."order" (status, created_at, id, user_id)
 VALUES
     (0, CURRENT_TIMESTAMP, 'd6b68f2b-6f0c-4c48-a6d1-d5411dfc9bf1', 'e7f575d2-5d56-4ec9-9981-41d3a4c18988'),
     (1, CURRENT_TIMESTAMP, '344a0c51-7e64-442d-93aa-4f3ac8b93534', '2a0c1e33-2780-4a34-80a9-8d5c5cbdb74e'),
@@ -55,7 +47,7 @@ VALUES
     (6, CURRENT_TIMESTAMP, '4884e2e1-6544-4e6e-9687-22454f0bb39b', 'a44b9e05-9c59-4a68-bc1d-d31b6bb1d2f7');
 
 -- Inserção de dados na tabela "order_item"
-INSERT INTO devops.order_item (quantity, id, order_id, product_id)
+INSERT INTO public.order_item (quantity, id, order_id, product_id)
 VALUES
     (1, '3f382f3d-30ed-4873-8a0f-79edff6e647a', 'd6b68f2b-6f0c-4c48-a6d1-d5411dfc9bf1', '06642132-6d99-42c8-b1a9-760b67c5eac3'),
     (2, '7329ac4d-61b4-4f6c-92ad-f3a7f78a0491', '344a0c51-7e64-442d-93aa-4f3ac8b93534', 'a9e2a400-12a3-4d44-8d17-8830816cb6cd'),

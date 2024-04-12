@@ -1,1 +1,1 @@
-docker run
+docker run --name devops-postgres --rm -p 5433:5432 -e POSTGRES_PASSWORD=123456  -v "D:\Projetos\Agrotopus\projetoDevops\psqldata":/var/lib/postgresql/data -e PGDATA=/var/lib/postgresql/data/pgdata -d postgres:12-alpine3.18
