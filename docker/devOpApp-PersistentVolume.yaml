@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: my-local-psql-pv
+spec:
+  storageClassName: local-storage
+  volumeMode: Filesystem
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+    - ReadWriteMany
+  hostPath:
+    path: '/run/desktop/mnt/host/d/Projetos/Agrotopus/projetoDevops/psqldata'
+    type: DirectoryOrCreate
