@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: doa-app
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: doa-app
+  template:
+    metadata:
+      labels:
+        app: doa-app
+    spec:
+      containers:
+        - name: doa-app-pod
+          image: heliomba/dev-op-app:v1.0
+          ports:
+            - containerPort: 8080
