@@ -17,3 +17,11 @@ spec:
           image: heliomba/dev-op-app:v1.0
           ports:
             - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /health/liveness
+              port: 8080
+          readinessProbe:
+            httpGet:
+              path: /health/readiness
+              port: 8080
