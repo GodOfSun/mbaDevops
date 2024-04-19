@@ -1,0 +1,17 @@
+{
+	"ulid": "01HVVMT49K87QZDW3K33R34ES4",
+	"minTime": 1713535201878,
+	"maxTime": 1713542400000,
+	"stats": {
+		"numSamples": 194703,
+		"numSeries": 138,
+		"numChunks": 1624
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01HVVMT49K87QZDW3K33R34ES4"
+		]
+	},
+	"version": 1
+}

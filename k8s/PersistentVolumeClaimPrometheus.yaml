@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: my-local-prometheus-pvc
 spec:
-  storageClassName: local-storage-prometheus
+  storageClassName: local-storage
   accessModes:
     - ReadWriteOnce
     - ReadWriteMany

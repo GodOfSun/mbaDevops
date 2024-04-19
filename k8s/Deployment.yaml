@@ -14,6 +14,7 @@ spec:
     spec:
       containers:
         - name: doa-app-pod
+          imagePullPolicy: Always
           image: heliomba/dev-op-app:v1.0
           ports:
             - containerPort: 8080
